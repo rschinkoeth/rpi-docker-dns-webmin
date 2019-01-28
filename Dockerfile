@@ -10,7 +10,7 @@ RUN rm -rf /etc/apt/apt.conf.d/docker-gzip-indexes \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y wget bind9 perl libnet-ssleay-perl openssl \
       libauthen-pam-perl libpam-runtime libio-pty-perl dnsutils \
       apt-show-versions python \
- && wget "https://sourceforge.net/projects/webadmin/files/webmin/${WEBMIN_VERSION}/webmin_${WEBMIN_VERSION}_all.deb" -P /tmp/ \
+ && wget "http://sourceforge.net/projects/webadmin/files/webmin/${WEBMIN_VERSION}/webmin_${WEBMIN_VERSION}_all.deb" -P /tmp/ \
  && dpkg -i /tmp/webmin_${WEBMIN_VERSION}_all.deb \
  && rm -rf /tmp/webmin_${WEBMIN_VERSION}_all.deb \
  && rm -rf /var/lib/apt/lists/*
